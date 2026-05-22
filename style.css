@@ -1,6 +1,8 @@
+/* Genel Sayfa Ayarları */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,51 +10,62 @@ body {
     margin: 0;
 }
 
+/* Havalı Profil Kartı */
 .card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
     max-width: 400px;
     width: 100%;
+    /* Geçiş Animasyonu Ayarı */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
 }
 
+/* Fareyle Kartın Üzerine Gelindiğinde (Hover Animasyonu) */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Başlık ve Yazı Renkleri */
 h1 {
-    color: #333;
+    color: #38bdf8;
     margin-bottom: 5px;
+    font-size: 2rem;
 }
 
 h2 {
-    color: #777;
-    font-size: 1.1rem;
+    color: #94a3b8;
     font-weight: 400;
-    margin-top: 0;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background: #eee;
-    margin: 20px 0;
+p {
+    line-height: 1.6;
+    color: #cbd5e1;
 }
 
+/* İletişim Bölümü */
 .contact-info {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
-    background: #fafafa;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
 }
 
 .contact-info h3 {
-    margin-top: 0;
+    color: #38bdf8;
     font-size: 1rem;
-    color: #444;
+    margin-bottom: 10px;
 }
 
 .contact-info p {
+    font-size: 0.95rem;
     margin: 5px 0;
-    font-size: 0.9rem;
-    color: #666;
 }
